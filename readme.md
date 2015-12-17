@@ -3,7 +3,7 @@
 ## Challenges
 
 
-We'll build off a rails app with auth. Fork and clone the [rails_auth app](github.com/sf-wdi-22-23/rails_auth). If you already have rails_auth_development and rails_auth_test databases, drop those before you `rake db:create`.
+We'll build off a rails app with auth. Fork and clone this app.
 
 **Model Method Tests**
   ```ruby
@@ -25,9 +25,9 @@ We'll build off a rails app with auth. Fork and clone the [rails_auth app](githu
   user1.generate_username
   # => cjacoby64
 
-  # user2 has first_name "Adam", last_name "Braus"
+  # user2 has first_name "Erik", last_name "Erwitt"
   user2.generate_username
-  # => abraus98
+  # => eerwitt98
   ```
 
   Hint: use a regular expression to check the format of the username.
