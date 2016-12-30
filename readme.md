@@ -3,38 +3,6 @@
 ## Challenges
 
 
-We'll build off a rails app with auth. Fork and clone this app.
-
-**Model Method Tests**
-  ```ruby
-  describe "#full_name" do
-    it "joins first name and last name" do
-      expect(@user.full_name).to eq("#{@user.first_name} #{@user.last_name}")
-    end
-  end
-  ```
-
-1. Create and run a migration to add a `first_name` and a `last_name` column to the `users` table.
-
-1. Write a `full_name` instance method in the `User` model to pass the test you added.
-
-1. Write a spec for a `generate_username` method that combines the first letter of a user's first name with the user's full last name and a random 2 digit number (10 to 99). All letters should be changed to lower case. Examples:
-
-  ```ruby
-  # user1 has first_name "Cameron", last_name "Jacoby"
-  user1.generate_username
-  # => cjacoby64
-
-  # user2 has first_name "Erik", last_name "Erwitt"
-  user2.generate_username
-  # => eerwitt98
-  ```
-
-  Hint: use a regular expression to check the format of the username.
-
-1. Write a `generate_username` method in the `User` model that passes your tests.
-
-
 **Controller Tests with Recipes!**
 
 1. Create a `Recipe` model and its controller. A recipe should include the dish's title and the instructions for making the dish. You can assume the instructions are plain text.
@@ -66,9 +34,5 @@ We'll build off a rails app with auth. Fork and clone this app.
 1. Write a spec for an `update` action. It should take in new data for a specific recipe, change the recipe in the database, and redirect to the show page for the item.
 
 1. Update your controller to pass the tests you wrote for your `update` action.
-
-1. Let's give users the ability to create recipes associated with their own account. Set up a one-to-many (1:N) relationship between a user and their recipes.
-
-1. Update your recipe controller spec to check that when a user creates a recipe, it's saved to the user's recipe list.
 
 1. Refactor the `create` method in your `RecipesController` to pass your new `create` action tests.
